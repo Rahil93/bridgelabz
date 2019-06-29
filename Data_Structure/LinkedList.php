@@ -140,6 +140,25 @@ class LinkedList{
     $n = null;
   }
 
+  public static function popAt($pos)
+  {
+    if ($pos == 1) {
+      $n = self::$head;
+      self::$head = self::$head->next;
+      $n = null;
+    }
+    else {
+      $n = self::$head;
+      $n1 = null;
+      for ($i = 0; $i < $pos - 1; $i++) {
+        $n1 = $n;
+        $n = $n->next;
+      }
+      $n1->next = $n->next;
+      $n = null;
+    }
+  }
+
   public static function display()
   {
     $n = self::$head;
