@@ -17,7 +17,9 @@ fscanf(STDIN,"%s\n",$data);
 // LinkedList::remove($data);
 // LinkedList::add($data);
 // echo LinkedList::search($data)."\n";
-echo "Size : ".LinkedList::size()."\n";
+// echo "Size : ".LinkedList::size()."\n";
+echo "Index : ".LinkedList::index($data)."\n";
+
 LinkedList::display();
 
 

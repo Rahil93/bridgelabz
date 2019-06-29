@@ -93,6 +93,18 @@ class LinkedList{
     return $size;
   }
 
+  public static function index($data)
+  {
+    $n = self::$head;
+    $count = 0;
+    while (strcmp($data,$n->data) != 0 && $n->next != null) {
+      $n = $n->next;
+      $count++;
+    }
+    $count++;
+    return $count;
+  }
+
   public static function display()
   {
     $n = self::$head;
