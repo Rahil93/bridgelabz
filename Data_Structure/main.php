@@ -15,7 +15,8 @@ LinkedList::display();
 echo "\nEnter the data : ";
 fscanf(STDIN,"%s\n",$data);
 // LinkedList::remove($data);
-LinkedList::add($data);
+// LinkedList::add($data);
+echo LinkedList::search($data)."\n";
 LinkedList::display();
 
 

@@ -67,7 +67,21 @@ class LinkedList{
     }
   }
 
-  public function display()
+  public static function search($data)
+  {
+    $n = self::$head;
+
+    while ($n->next != null) {
+      if (strcmp($data,$n->data) == 0) {
+        return true;
+        break;
+      }
+      $n = $n->next;
+    }
+    return false;
+  }
+
+  public static function display()
   {
     $n = self::$head;
     while ($n->next != null) {
