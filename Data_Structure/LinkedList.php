@@ -105,6 +105,29 @@ class LinkedList{
     return $count;
   }
 
+  public static function insertAt($data,$pos)
+  {
+    $node = new Node($data);
+
+    $size = LinkedList::size();
+
+    if ($pos == 0) {
+      $node->next = self::$head;
+      self::$head = $node;
+    }
+    elseif ($pos == $size) {
+      self::insert($data);
+    }
+    else {
+      $n = self::$head;
+      for ($i = 0; $i < $pos - 1; $i++) {
+        $n = $n->next;
+      }
+      $node->next = $n->next;
+      $n->next = $node;
+    }
+  }
+
   public static function display()
   {
     $n = self::$head;

@@ -14,11 +14,15 @@ for ($i = 0; $i < $size; $i++) {
 LinkedList::display();
 echo "\nEnter the data : ";
 fscanf(STDIN,"%s\n",$data);
+$pos;
+echo "Enter the position : ";
+fscanf(STDIN,"%s\n",$pos);
 // LinkedList::remove($data);
 // LinkedList::add($data);
 // echo LinkedList::search($data)."\n";
 // echo "Size : ".LinkedList::size()."\n";
-echo "Index : ".LinkedList::index($data)."\n";
+// echo "Index : ".LinkedList::index($data)."\n";
+LinkedList::insertAt($data,$pos);
 
 LinkedList::display();
 
