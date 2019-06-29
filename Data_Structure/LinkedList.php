@@ -81,6 +81,18 @@ class LinkedList{
     return false;
   }
 
+  public static function size()
+  {
+    $n = self::$head;
+    $size = 0;
+    while ($n->next != null) {
+      $n = $n->next;
+      $size++;
+    }
+    $size++;
+    return $size;
+  }
+
   public static function display()
   {
     $n = self::$head;
