@@ -12,5 +12,10 @@ for ($i = 0; $i < $size; $i++) {
 }
 
 LinkedList::display();
+echo "\nEnter the data : ";
+fscanf(STDIN,"%s\n",$data);
+LinkedList::remove($data);
+LinkedList::display();
+
 
  ?>
