@@ -1,5 +1,4 @@
 <?php
-// require 'Node.php';
 class Node{
   public $data;
   public $next;
@@ -26,7 +25,6 @@ class LinkedList{
     }
     $n->next = $node;
     $node->next = null;
-    // $node = &$node;
   }
 
   public function display()
@@ -39,16 +37,4 @@ class LinkedList{
     echo "|".$n->data."|null";
   }
 }
-
-  $data;
-  $size;
-  echo "Enter the no. of node add in Linked list : ";
-  fscanf(STDIN,"%s\n",$size);
-  for ($i = 0; $i < $size; $i++) {
-    fscanf(STDIN,"%s\n",$data);
-    LinkedList::insert($data);
-  }
-
-  LinkedList::display();
-
  ?>
