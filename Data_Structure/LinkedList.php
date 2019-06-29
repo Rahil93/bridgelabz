@@ -128,6 +128,18 @@ class LinkedList{
     }
   }
 
+  public static function pop()
+  {
+    $n = self::$head;
+    $n1 = null;
+    while ($n->next != null) {
+      $n1 = $n;
+      $n = $n->next;
+    }
+    $n1->next = null;
+    $n = null;
+  }
+
   public static function display()
   {
     $n = self::$head;
