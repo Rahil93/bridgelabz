@@ -27,6 +27,23 @@ class LinkedList{
     $node->next = null;
   }
 
+  public static function add($data)
+  {
+    $n = self::$head;
+    $n1 = null;
+
+    while (strcmp($data,$n->data) != 0 && $n->next != null) {
+        $n1 = $n;
+        $n = $n->next;
+    }
+    if (strcmp($data,$n->data) != 0) {
+      LinkedList::insert($data);
+    }
+    else {
+      echo "Data is already present...\n";
+    }
+  }
+
   public static function remove($data)
   {
     $n = self::$head;
