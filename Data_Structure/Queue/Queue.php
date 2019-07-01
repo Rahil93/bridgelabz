@@ -38,8 +38,13 @@
         {
             $tempnode = self::$front;
             self::$front = self::$front->next;
-            return $tempnode;
+            return $tempnode->data;
             $tempnode = null; 
+        }
+
+        public static function isEmpty()
+        {
+            return self::$front == null;
         }
 
         public static function display()
@@ -47,7 +52,7 @@
             $tempnode = self::$front;
             echo "Queue Are...\n";
             while ($tempnode->next != null) {
-                echo $tempnode->data."\n";
+                echo $tempnode->data." ";
                 $tempnode = $tempnode->next;
             }
             echo $tempnode->data."\n";
