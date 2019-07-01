@@ -13,9 +13,11 @@ for ($i = 0; $i < $size; $i++) {
     Queue::enqueue($data);
 }
 Queue::display();
+echo "Size : ".Queue::size()."\n";
 echo "Removed element : ".Queue::dequeue()."\n";
 echo "Is Empty : ";
 var_dump(Queue::isEmpty())."\n";
+echo "Size : ".Queue::size()."\n";
 Queue::display();
 
 ?>
