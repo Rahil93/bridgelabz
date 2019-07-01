@@ -27,6 +27,14 @@ class Node{
          }
      }
 
+     public static function pop()
+     {
+         $tempnode = self::$top;
+         self::$top = self::$top->next;
+         return $tempnode->data;
+         $tempnode = null;
+     }
+
      public static function display()
      {
          $tempnode = self::$top;

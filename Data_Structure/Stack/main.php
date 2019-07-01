@@ -11,5 +11,7 @@ for ($i = 0; $i < $size; $i++) {
     Stack::push($data);
 }
 Stack::display();
+echo "Removed Stack : ".Stack::pop();
+Stack::display();
 
 ?>
