@@ -68,7 +68,23 @@ class Dequeue
         self::$rear = $prevnode;
         return $tempnode->data;
         $tempnode = null;
+    }
 
+    public static function isEmpty()
+    {
+        return self::$front == null;
+    }
+
+    public static function size()
+    {
+        $count = 0;
+        $tempnode = self::$front;
+        while ($tempnode->next != null) {
+            $count++;
+            $tempnode = $tempnode->next;
+        }
+        $count++;
+        return $count++;
     }
 
     public static function display()
