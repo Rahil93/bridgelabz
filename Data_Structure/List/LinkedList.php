@@ -41,6 +41,7 @@ class LinkedList{
     }
     else {
       echo "Data is already present...\n";
+      // self::remove($data);
     }
   }
 
@@ -166,7 +167,7 @@ class LinkedList{
       echo "|".$n->data."|-->";
       $n = $n->next;
     }
-    echo "|".$n->data."|null";
+    echo "|".$n->data."|null\n";
   }
 }
  ?>
