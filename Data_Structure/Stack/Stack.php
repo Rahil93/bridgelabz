@@ -35,6 +35,11 @@ class Node{
          $tempnode = null;
      }
 
+     public static function peek()
+     {
+         return self::$top->data;
+     }
+
      public static function display()
      {
          $tempnode = self::$top;
