@@ -40,10 +40,27 @@ class Node{
          return self::$top->data;
      }
 
+     public static function isEmpty()
+     {
+         return self::$top == null? true:false;
+     }
+
+     public static function size()
+     {
+         $count = 0;
+         $tempnode = self::$top;
+         while ($tempnode->next != null) {
+             $count++;
+             $tempnode = $tempnode->next;
+         }
+         $count++;
+         return $count;
+     }
+
      public static function display()
      {
          $tempnode = self::$top;
-         echo "\n Stack Are... \n";
+         echo "Stack Are... \n";
          while ($tempnode->next != null) {
              echo $tempnode->data."\n";
              $tempnode = $tempnode->next;
