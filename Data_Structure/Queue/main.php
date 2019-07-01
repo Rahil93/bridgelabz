@@ -11,5 +11,8 @@ for ($i = 0; $i < $size; $i++) {
     Queue::enqueue($data);
 }
 Queue::display();
+echo "Removed element : ".Queue::dequeue()."\n";
+Queue::display();
+
 
 ?>

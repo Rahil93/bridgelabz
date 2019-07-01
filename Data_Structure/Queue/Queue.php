@@ -34,6 +34,14 @@
             }
         }
 
+        public static function dequeue()
+        {
+            $tempnode = self::$front;
+            self::$front = self::$front->next;
+            return $tempnode;
+            $tempnode = null; 
+        }
+
         public static function display()
         {
             $tempnode = self::$front;
