@@ -6,7 +6,7 @@ $size;
 // echo "Is Empty : ";
 // var_dump(Stack::isEmpty())."\n";
 
-echo "Enter the No. of Node u want in Stack : ";
+echo "Enter the No. of element u want in Stack : ";
 fscanf(STDIN,"%s\n",$size);
 echo "Add Element... \n";
 for ($i = 0; $i < $size; $i++) { 
