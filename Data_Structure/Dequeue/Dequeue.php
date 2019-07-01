@@ -48,6 +48,29 @@ class Dequeue
         }
     }
 
+    public static function removeFront()
+    {
+        $tempnode = self::$front;
+        self::$front = self::$front->next;
+        return $tempnode->data;
+        $tempnode = null;
+    }
+
+    public static function removeRear()
+    {
+        $tempnode = self::$front;
+        $prevnode = null;
+        while ($tempnode->next !=null) {
+            $prevnode = $tempnode;
+            $tempnode = $tempnode->next;
+        }
+        $prevnode->next = null;
+        self::$rear = $prevnode;
+        return $tempnode->data;
+        $tempnode = null;
+
+    }
+
     public static function display()
     {
         $tempnode = self::$front;

@@ -31,10 +31,14 @@ for ($i = 0; $i < $size; $i++) {
 }
 Dequeue::display();
 // echo "Size : ".Dequeue::size()."\n";
-// echo "Removed element : ".Dequeue::dequeue()."\n";
+echo "Removed first element : ".Dequeue::removeFront()."\n";
+echo "Removed last element : ".Dequeue::removeRear()."\n";
 // echo "Is Empty : ";
 // var_dump(Dequeue::isEmpty())."\n";
 // echo "Size : ".Dequeue::size()."\n";
+Dequeue::display();
+// echo "Removed first element : ".Dequeue::removeFront()."\n";
+// echo "Removed last element : ".Dequeue::removeRear()."\n";
 // Dequeue::display();
 
 ?>
