@@ -7,7 +7,6 @@ $myfile = fopen("sample.txt","r");
 $s =  fgets($myfile);
 $str = explode(" ",$s);
 for ($i=0; $i < sizeof($str); $i++) {
-    // echo $str[$i]."\n";
     LinkedList::insert($str[$i])."\n";
 }
 LinkedList::sort();

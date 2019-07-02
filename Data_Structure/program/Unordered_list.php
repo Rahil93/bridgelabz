@@ -6,8 +6,7 @@ $myfile = fopen("sample.txt","r");
 
 $s =  fgets($myfile);
 $str = explode(" ",$s);
-for ($i=0; $i < sizeof($str) - 1; $i++) {
-    // echo $str[$i]."\n";
+for ($i=0; $i < sizeof($str); $i++) {
     LinkedList::insert($str[$i])."\n";
 }
 LinkedList::display();
