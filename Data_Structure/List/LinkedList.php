@@ -40,8 +40,7 @@ class LinkedList{
       LinkedList::insert($data);
     }
     else {
-      echo "Data is already present...\n";
-      // self::remove($data);
+      LinkedList::remove($data);
     }
   }
 
@@ -80,6 +79,46 @@ class LinkedList{
       $n = $n->next;
     }
     return false;
+  }
+
+  public static function sort()
+  {
+    $size = LinkedList::size();
+    if ($size > 1) {
+      $wasChanged;
+      do {
+        $current_node = self::$head;
+        $prev_node = null;
+        $next_node = self::$head->next;
+        $wasChanged = false;
+        while ($next_node != null) {
+          if (strcmp($current_node->data,$next_node->data) == 1) {
+            $wasChanged = true;
+            if ($prev_node == null) {
+              $temp_node = $next_node->next;
+
+              self::$head = $next_node;
+              $next_node->next = $current_node;
+              $current_node->next = $temp_node;
+            }
+            else {
+              $temp_node = $next_node->next;
+
+              $prev_node->next = $next_node;
+              $next_node->next = $current_node;
+              $current_node->next = $temp_node;
+            }
+            $prev_node = $next_node;
+            $next_node = $current_node->next;
+          }
+          else {
+            $prev_node = $current_node;
+            $current_node = $next_node;
+            $next_node = $next_node->next;
+          }
+        }
+      } while ($wasChanged);
+    }
   }
 
   public static function size()
