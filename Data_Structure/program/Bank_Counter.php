@@ -36,6 +36,7 @@ class BankCounter{
                         $cashbalance -= $transactionamount;
                         echo "Amount Withdraw is $transactionamount\n";
                         echo "Total Amount is $cashbalance\n";    
+                        Queue::dequeue();
                     }
                     else {
                         echo "their is no sufficient amount to perform withdrawal of $transactionAmount\n";

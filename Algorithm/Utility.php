@@ -2,6 +2,18 @@
 
 class Utility{
 
+  // Factorial
+
+  function factorial($num)
+    {
+        $fact = 1;
+        for ($i = 1; $i <= $num; $i++)
+        {
+            $fact = $fact * $i;
+        }
+        return $fact;
+    }
+
   // Anagram
 
   public static function Anagram($string1,$string2)
