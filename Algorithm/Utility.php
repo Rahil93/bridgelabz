@@ -349,6 +349,91 @@ class Utility{
     echo "Celsius to Fahrenheit : $fahrenheit\n";
     echo "Fahrenheit to Celsius : $celsius";
   }
+
+  public static function Printcalender($arr)
+    {
+        echo "Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
+        for ($i = 0; $i < 6; $i++) 
+        {
+            for ($j = 0; $j < 7; $j++)
+            {
+                if ($arr[$i][$j] == '-' || $arr[$i][$j] > 31)
+                {
+                    echo "     ";
+                } 
+                else 
+                {
+                if ($arr[$i][$j] < 10) 
+                {
+                    echo $arr[$i][$j] . "    ";
+                } 
+                else 
+                 {
+                        echo $arr[$i][$j] . "   ";
+                }
+            }
+        }
+            echo "\n";
+        }
+    }
+    public static function arrayFill($start, $arr, $end)
+    {
+        $count = 1;
+        for ($i = $start; $i < 7; $i++) {
+            $arr[0][$i] = $count++;
+        }
+        for ($i = 1; $i < 6; $i++) {
+            for ($j = 0; $j < 7 && $count <= $end; $j++) {
+                $arr[$i][$j] = $count++;
+            }
+        }
+        return $arr;
+    }
+    public static function initArray()
+    {
+        $arr = [];
+        for ($i = 0; $i < 6; $i++) {
+            $array1 = array();
+            for ($j = 0; $j < 7; $j++) {
+                $array1[$j] = '-';
+            }
+            array_push($arr, $array1);
+        }
+        return $arr;
+    }
+    public static function calTotal($month, $year)
+    {
+        if ($month < 8)
+        {
+        
+            if ($month % 2 == 0) 
+            {
+                if ($month == 2) 
+                {
+                    if (Utility::leap_year($year)) 
+                    {
+                            return 29;
+                    }
+                return 28;
+                }
+            return 30;
+            } 
+            else 
+            {
+                return 31;
+            }
+        }
+        else
+        {
+            if ($month % 2 == 0) 
+            {
+                return 31;
+            }
+            return 30;
+        }
+    }
 }
+
+
 
  ?>
