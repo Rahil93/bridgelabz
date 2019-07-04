@@ -375,6 +375,7 @@ class Utility{
         }
             echo "\n";
         }
+        var_dump($arr);
     }
     public static function arrayFill($start, $arr, $end)
     {
