@@ -222,12 +222,10 @@ class LinkedList{
       $node = self::$head;
       while ($node != null) {
           $s .= $node->data . " ";
-           $node = $node->next;
+          $node = $node->next;
       }
       $s = substr($s, 0, -1);
       return $s;
   }
-}
-
-   
+} 
  ?>
