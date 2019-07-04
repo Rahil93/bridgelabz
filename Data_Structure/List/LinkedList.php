@@ -10,6 +10,7 @@ class Node{
 
 class LinkedList{
   public static $head;
+  public static $tail;
 
   public static function insert($data)
   {
@@ -25,6 +26,7 @@ class LinkedList{
     }
     $n->next = $node;
     $node->next = null;
+    return $node->data;
   }
 
   public static function add($data)
@@ -121,6 +123,11 @@ class LinkedList{
     }
   }
 
+  public static function isEmpty()
+    {
+        return self::$head === null;
+    }
+
   public static function size()
   {
     $n = self::$head;
@@ -208,5 +215,19 @@ class LinkedList{
     }
     echo "|".$n->data."|null\n";
   }
+
+  public static function getString()
+  {
+      $s = "";
+      $node = self::$head;
+      while ($node != null) {
+          $s .= $node->data . " ";
+           $node = $node->next;
+      }
+      $s = substr($s, 0, -1);
+      return $s;
+  }
 }
+
+   
  ?>

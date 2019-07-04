@@ -13,5 +13,4 @@ $denominator = Utility::factorial($num + 1) * Utility::factorial($num);
 $bst = floor($numerator/$denominator);
 echo $bst."\n";
 
-
 ?>
