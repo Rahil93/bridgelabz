@@ -3,9 +3,9 @@
 class Utility
 {
     // convert array into json format & store in json file
-    public function writeJson($arr,$file)
+    public function writeJson($data,$file)
     {
-        $jsondata = json_encode($arr);
+        $jsondata = json_encode($data);
         $path = "../JSON_file/";
         $fullpath = $path . $file.".json";
         file_put_contents($fullpath,$jsondata);
@@ -16,8 +16,8 @@ class Utility
         $path = "../JSON_file/";
         $fullpath = $path . $file.".json";
         $str = file_get_contents($fullpath);
-        $arr = json_decode($str,true);
-        return $arr;
+        $data = json_decode($str,true);
+        return $data;
     }   
 }
 
