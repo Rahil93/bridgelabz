@@ -1,5 +1,7 @@
 <?php
 
+require 'Utility.php';
+
 // Inventory class with property
 class Inventory
 {
@@ -37,23 +39,7 @@ class InventoryOperation
         }
         return $arrobj;
     }
-    // convert array into json format & store in json file
-    public function writeJson($arr,$file)
-    {
-        $jsondata = json_encode($arr);
-        $path = "../JSON_file/";
-        $fullpath = $path . $file;
-        file_put_contents($fullpath,$jsondata);
-    }
-    // fetch the json data & convert into array a readable format
-    public function readJson($file)
-    {   
-        $path = "../JSON_file/";
-        $fullpath = $path . $file;
-        $str = file_get_contents($fullpath);
-        $arr = json_decode($str,true);
-        return $arr;
-    }   
+    
     // Display the total price of the Inventory 
     public function display($arr)
     {   
@@ -69,10 +55,10 @@ class InventoryOperation
 }
 
 $obj = new InventoryOperation();
-$file = "inventory.json";
+$file = "inventory";
 $arrobj = $obj->arrayobj();
-$obj->writeJson($arrobj,$file);
-$arr = $obj->readJson($file);
+Utility::writeJson($arrobj,$file);
+$arr = Utility::readJson($file);
 $obj->display($arr);
 
 
