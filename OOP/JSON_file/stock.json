@@ -1,0 +1,28 @@
+[
+    {
+        "Stock 1" : [
+            {
+                "Number of share" : 5,
+                "Share Price" : 100
+            }
+        ]
+    },
+
+    {
+        "Stock 2" : [
+            {
+                "Number of share" : 2,
+                "Share Price" : 30
+            }
+        ]
+    },
+
+    {
+        "Stock 3" : [
+            {
+                "Number of share" : 4,
+                "Share Price" : 60
+            }
+        ]
+    }
+]
