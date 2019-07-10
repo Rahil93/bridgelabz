@@ -1,0 +1,42 @@
+{
+    "Account": {
+        "Account No.": 8043,
+        "Amount": 9600
+    },
+    "Stock": {
+        "Apple": {
+            "Number of share": 4,
+            "Share Price": "800"
+        },
+        "Google": {
+            "Number of share": 7,
+            "Share Price": "500"
+        },
+        "Infosys": {
+            "Number of share": 8,
+            "Share Price": "200"
+        },
+        "Microsoft": {
+            "Share Price": 600,
+            "Number of share": 1
+        }
+    },
+    "Transaction Detail": {
+        "Google": {
+            "Date & Time of Transaction": "10-07-2019 01:14:11pm",
+            "Share": "buy"
+        },
+        "Infosys": {
+            "Date & Time of Transaction": "10-07-2019 01:14:11pm",
+            "Share": "buy"
+        },
+        "Apple": {
+            "Date & Time of Transaction": "10-07-2019 01:14:11pm",
+            "Share": "sell"
+        },
+        "Microsoft": {
+            "Date & Time of Transaction": "10-07-2019 01:14:11pm",
+            "Share": "buy"
+        }
+    }
+}
