@@ -10,9 +10,10 @@ class Deck_Cards
     {
         $cards = [];
         $k = 0;
+        $l = 0;
         for ($i=0; $i < sizeof($this->suit); $i++) { 
             for ($j=0; $j < sizeof($this->rank); $j++) { 
-                $cards[$k++] = $this->suit[$i]." of ".$this->rank[$j];
+                $cards[$i][$j] = $this->suit[$i]." of ".$this->rank[$j];
             }
         }
         return $cards;
@@ -23,8 +24,9 @@ class Deck_Cards
     {
         for ($i=0; $i < 4; $i++) { 
             for ($j=0; $j < 9; $j++) { 
-                $rand_num = rand(1,51);
-                $distrubte[$i][$j] = $arr[$rand_num];
+                $rand_row = rand(0,3);
+                $rand_column = rand(0,12);
+                $distrubte[$i][$j] = $arr[$rand_row][$rand_column];
             }
         }
         $this->print($distrubte);
@@ -44,6 +46,8 @@ class Deck_Cards
 
 $obj = new Deck_Cards();
 $arr = $obj->card();
+var_dump($arr);
 $obj->shuffle($arr);
+
 
 ?>
