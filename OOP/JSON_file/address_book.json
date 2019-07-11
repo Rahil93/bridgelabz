@@ -1,0 +1,40 @@
+{
+    "Address Book Detail": {
+        "Rahil Sayed": {
+            "First Name": "Rahil",
+            "Last Name": "Sayed",
+            "Address": "Kausa",
+            "City": "Mumbra",
+            "State": "Maharasthra",
+            "Zipcode": "400612",
+            "Phone Number": "8457954624"
+        },
+        "Harun Shaikh": {
+            "First Name": "Harun",
+            "Last Name": "Shaikh",
+            "Address": "Kausa",
+            "City": "Mumbra",
+            "State": "Maharasthra",
+            "Zipcode": "400654",
+            "Phone Number": "8475123654"
+        },
+        "Chetan Gawas": {
+            "First Name": "Chetan",
+            "Last Name": "Gawas",
+            "Address": "Kalamboli",
+            "City": "New",
+            "State": "Maharashtra",
+            "Zipcode": "400152",
+            "Phone Number": "8479563214"
+        },
+        "Tejas Kamble": {
+            "First Name": "Tejas",
+            "Last Name": "Kamble",
+            "Address": "Kurla",
+            "City": "Mumbai",
+            "State": "Maharashtra",
+            "Zipcode": "400560",
+            "Phone Number": "8457954632"
+        }
+    }
+}
