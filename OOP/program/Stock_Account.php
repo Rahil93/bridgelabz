@@ -95,7 +95,7 @@ class Stock_account  extends Stock_amount
             $temparr = $user_arr['Stock'];
             if (!$this->valueCheck($temparr,$companyname)) {
                 $arrkey = [$companyname];
-                $arrvalue[$arrkey[0]] = array('Share Price' => $amount, 'Number of share' => 1);
+                $arrvalue[$arrkey[0]] = array('Number of share' => 1, 'Share Price' => $amount);
                 $result = array_merge($temparr,$arrvalue);
                 $user_arr['Stock'] = $result;
                 $amt = $user_arr['Account']['Amount'] - $amount;
