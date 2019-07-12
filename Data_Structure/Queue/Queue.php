@@ -64,7 +64,7 @@
             $tempnode = self::$front;
             echo "Queue Are...\n";
             while ($tempnode->next != null) {
-                echo $tempnode->data." ";
+                echo $tempnode->data."\n";
                 $tempnode = $tempnode->next;
             }
             echo $tempnode->data."\n";
