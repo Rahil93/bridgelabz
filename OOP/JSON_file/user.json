@@ -17,8 +17,8 @@
             "Share Price": "200"
         },
         "Microsoft": {
-            "Share Price": 600,
-            "Number of share": 1
+            "Number of share": 1,
+            "Share Price": "600"
         }
     },
     "Transaction Detail": {
