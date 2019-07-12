@@ -12,6 +12,11 @@ class LinkedList{
   public static $head;
   public static $tail;
 
+  public static function new_Node()
+  {
+    self::$head = null;
+  }
+
   public static function insert($data)
   {
     $node = new Node($data);
