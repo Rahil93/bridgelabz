@@ -1,6 +1,6 @@
 <?php
 
-class Singleton_Eager
+class Singleton_Lazy
 { 
     private static $instance;
     private static $counter = 0;
@@ -13,16 +13,16 @@ class Singleton_Eager
 
     public static function getInstance()
     {
-        if (!isset(self::$instance)) {
-            self::$instance = new Singleton_Eager();
-            return self::$instance;
-        }
+            if (!isset(self::$instance)) {
+                self::$instance = new Singleton_Lazy();
+                return self::$instance;
+            }   
     }
 }
 
-$objStudent = Singleton_Eager::getInstance();
+$objStudent = Singleton_Lazy::getInstance();
 echo "Object for Student\n";
-$objEmployee = Singleton_Eager::getInstance();
+$objEmployee = Singleton_Lazy::getInstance();
 echo "Object for Employee\n";
 
 ?>
